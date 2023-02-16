@@ -34,7 +34,7 @@ angle:
    cancel_false_hits: true
 
    # How many violations before the command is excecuted (-1 for none)
-   threshold: 10
+   threshold: 4
 
    # Command to execute when G.W.E.N. thinks a player is hacking
    command: "p kick {player} Forcefield is not allowed (ping = {ping}, tps = {tps})"
@@ -64,7 +64,7 @@ criticals:
    enabled: true
 
    # How many critical hits should a player be able to chain
-   max_chained_crits: 20
+   max_chained_crits: 10
 
    # Should a hit be cancelled if it is a critical and the player is on the ground?
    cancel_false_hit: true
@@ -91,7 +91,7 @@ fastbow:
    # How many violations before the command is excecuted (-1 for none)
    threshold: 6
 
-   # Command to execute when G.W.E.N. thinks a player is hacking
+   # Command to execute when G.W.E.N. think`s a player is hacking
    command: "p kick {player} FastBow is not allowed (ping = {ping}, tps = {tps})"
 
 # FightSpeed prevents players from attacking too quickly
@@ -101,7 +101,7 @@ fightspeed:
 
    # How many times should a player be able to attack in 1 second
    # NoCheatPlus's fightspeed check allows 15 hits per second
-   max_hits_per_second: 45
+   max_hits_per_second: 13
 
    # How many violations before the command is excecuted (-1 for none)
    threshold: 30
@@ -139,7 +139,7 @@ speed:
    enabled: true
 
    # Speed limits per tick
-   sprinting_speed: 0.7
+   sprinting_speed: 0.6
    sneaking_speed: 0.4
 
    # On and under water
@@ -165,7 +165,7 @@ speed:
    use_move_counting: true
 
    # How many moves per second should be assumed as legitimate? (NCP = 22)
-   max_moves: 26
+   max_moves: 22
 
    # How many times should a player be allowed to toggle sneak in a second (flare hacked client)
    max_sneak_toggles: 17
@@ -180,7 +180,7 @@ speed:
    slow_multiplier: 0.02
 
    # G.W.E.N. will rubberband detected players band_chance % of the time
-   band_chance: 75
+   band_chance: 90
 
    # How many violations before the command is excecuted (-1 for none)
    threshold: 30
@@ -268,7 +268,7 @@ knockback:
    same_pos_check: true
 
    # How long should G.W.E.N. wait to check?
-   ticks: 13
+   ticks: 4
 
    # How far must a player move into his attacker's sector to be detected?
    min_movement: 3.5
@@ -285,13 +285,13 @@ reach:
    enabled: true
 
    # How far should G.W.E.N. allow the player to reach
-   max_reach: 5.2
+   max_reach: 5.0
 
    # How far does bukkit allow players to reach (Don't change this)
    max_bukkit_reach: 9.0
 
    # Should G.W.E.N. silently cancel certain violations
-   silent_cancel: true
+   silent_cancel: false
 
    # How many violations before the command is excecuted (-1 for none)
    threshold: 5
@@ -305,7 +305,7 @@ noswing:
    enabled: true
 
    # How many violations before the command is excecuted (-1 for none)
-   threshold: 10
+   threshold: 4
 
    # Command to excecute when G.W.E.N. thinks a player is hacking
    command: "p kick {player} NoSwing is not allowed (ping = {ping}, tps = {tps})"
@@ -322,7 +322,7 @@ regen:
    min_regen_delay: 3600
 
    # How many violations before the command is executed (-1 for none)
-   threshold: 10
+   threshold: 4
 
    # Command to execute when G.W.E.N. thinks a player is hacking
    command: "p kick {player} Regen is not allowed (ping = {ping}, tps = {tps})"
@@ -330,7 +330,7 @@ regen:
 # Killaura detects combat hacks which give an unfair advantage
 killaura:
    # Do you want to enable the killaura check
-   enabled: false
+   enabled: true
 
    # How far should a player be allowed to yaw in 1 move
    max_yaw: 100.0
@@ -434,7 +434,7 @@ climb:
 # Jesus stops people from walking on water
 jesus:
    # Do you want to enable the Jesus check (experimental)
-   enabled: false
+   enabled: true
 
    # How often should G.W.E.N. check players (ms)
    check_delay: 200
@@ -460,7 +460,7 @@ phase:
    enabled: true
 
    # How many violations before the command is executed?
-   threshold: 10
+   threshold: 5
 
    # Command to execute when G.W.E.N. thinks a player is hacking
    command: "p kick {player} Phase is not allowed (ping = {ping}, tps = {tps})"
@@ -516,20 +516,20 @@ fastplace:
 # Spam prevents players from spamming the server chat
 spam:
    # Do you want to enable the spam check?
-   enabled: false
+   enabled: true
 
    # What words should not be covered by the anti-spam check?
    # messages less than 3 letters are already ignored
    whitelist:
      - "lol"
      - "hello"
-     - "okay"
+     - "hax"
 
    # How many messages should a player be able to send in 10 seconds
-   message_limit: 4
+   message_limit: 3
 
    # How fast can a player send messages (ticks)
-   chat_speed: 10
+   chat_speed: 109
 
    # How many violations before the command is excecuted (-1 for none)
    threshold: 10
@@ -552,7 +552,7 @@ kick_ticks: 120
 combat_time: 50
 
 # Should G.W.E.N. kill combat loggers (combat_time)
-kill_loggers: false
+kill_loggers: true
 
 # Should G.W.E.N. log events to a file?
 log_file: true
